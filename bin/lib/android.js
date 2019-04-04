@@ -155,11 +155,11 @@ module.exports = function (context) {
 		return fs.exists('platforms/android')
 			// Write preferences xml file
 			.then(function () { return fs.mkdir('platforms/android/app/src/main/res/xml/'); })
-			.then(function () { return fs.writeFile('/platforms/android/app/src/main/res/xml/apppreferences.xml', preferencesDocument.write()); })
+			.then(function () { return fs.writeFile('platforms/android/app/src/main/res/xml/apppreferences.xml', preferencesDocument.write()); })
 
 			// Write localization resource file
-			.then(function () { return fs.mkdir('platforms/android/res/values'); })
-			.then(function (prefs) { return fs.writeFile('/platforms/android/app/src/main/res/xml/apppreferences.xml', preferencesStringDocument.write()); })
+			.then(function () { return fs.mkdir('platforms/android/app/src/main/res/xml/'); })
+			.then(function (prefs) { return fs.writeFile('platforms/android/app/src/main/res/xml/apppreferences.xml', preferencesStringDocument.write()); })
 
 			.then(function () { console.log('android preferences file was successfully generated'); })
 			.catch(function (err) {
