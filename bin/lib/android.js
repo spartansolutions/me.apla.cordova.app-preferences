@@ -159,7 +159,7 @@ module.exports = function (context) {
 
 			// Write localization resource file
 			.then(function () { return fs.mkdir('platforms/android/app/src/main/res/xml/'); })
-			.then(function (prefs) { return fs.writeFile('platforms/android/app/src/main/res/xml/apppreferences.xml', preferencesStringDocument.write()); })
+			.then(function (prefs) { return fs.writeFile('platforms/android/app/src/main/res/values/apppreferences.xml', preferencesStringDocument.write()); })
 
 			.then(function () { console.log('android preferences file was successfully generated'); })
 			.catch(function (err) {
