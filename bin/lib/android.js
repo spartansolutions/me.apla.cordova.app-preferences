@@ -215,7 +215,7 @@ module.exports = function (context) {
 
 		return fs.exists('platforms/android')
 			// Remove preferences xml file
-			.then(function () { return fs.unlink('platforms/android/app/src/main/res/xml/apppreferences.xm'); })
+			.then(function () { return fs.unlink('platforms/android/app/src/main/res/xml/apppreferences.xml'); })
 
 			// Remove localization resource file
 			.then(function (prefs) { return fs.unlink('platforms/android/app/src/main/res/values/apppreferences.xml'); })
